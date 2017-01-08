@@ -3,6 +3,8 @@ class fail2ban::params {
   $package_name='fail2ban'
   $service_name='fail2ban'
 
+  $filterd='/etc/fail2ban/filter.d'
+
   case $::osfamily
   {
     'redhat':
