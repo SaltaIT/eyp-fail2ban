@@ -10,6 +10,7 @@ class fail2ban::params {
   {
     'redhat':
     {
+      $use_epel=true
       case $::operatingsystemrelease
       {
         /^[5-7].*$/:
@@ -20,6 +21,7 @@ class fail2ban::params {
     }
     'Debian':
     {
+      $use_epel=false
       case $::operatingsystem
       {
         'Ubuntu':
