@@ -1,6 +1,6 @@
 class fail2ban::params {
 
-  $package_name='fail2ban'
+
   $service_name='fail2ban'
 
   $filterd='/etc/fail2ban/filter.d'
@@ -13,8 +13,13 @@ class fail2ban::params {
       $use_epel=true
       case $::operatingsystemrelease
       {
-        /^[5-7].*$/:
+        /^[5-6].*$/:
         {
+          $package_name='fail2ban'
+        }
+        /^7.*$/:
+        {
+          $package_name=[ 'fail2ban', 'fail2ban-systemd' ]
         }
         default: { fail("Unsupported RHEL/CentOS version! - ${::operatingsystemrelease}")  }
       }
