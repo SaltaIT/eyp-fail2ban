@@ -16,10 +16,12 @@ class fail2ban::params {
         /^[5-6].*$/:
         {
           $package_name='fail2ban'
+          $jaild=undef
         }
         /^7.*$/:
         {
           $package_name=[ 'fail2ban', 'fail2ban-systemd' ]
+          $jaild='/etc/fail2ban/jail.d'
         }
         default: { fail("Unsupported RHEL/CentOS version! - ${::operatingsystemrelease}")  }
       }
@@ -27,6 +29,7 @@ class fail2ban::params {
     'Debian':
     {
       $use_epel=false
+      $jaild='/etc/fail2ban/jail.d'
       case $::operatingsystem
       {
         'Ubuntu':
