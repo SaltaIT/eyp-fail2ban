@@ -4,6 +4,7 @@ class fail2ban::params {
   $service_name='fail2ban'
 
   $filterd='/etc/fail2ban/filter.d'
+  $actiond='/etc/fail2ban/action.d'
 
   case $::osfamily
   {
