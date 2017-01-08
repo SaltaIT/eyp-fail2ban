@@ -1,3 +1,9 @@
+#
+# fail2ban::jail { 'test':
+#   logpath => '/var/log/apache.log',
+#   action => [ 'sendmail-whois[name=OpenVPN, dest=jordi@sysadmins.es, sender=apache@sysadmins.es]' ]
+# }
+#
 define fail2ban::jail (
                         $logpath,
                         $action,
