@@ -2,7 +2,7 @@
   "name": "eyp-fail2ban",
   "version": "0.1.0",
   "author": "eyp",
-  "summary": null,
+  "summary": "fail2ban management",
   "license": "Apache-2.0",
   "source": "https://github.com/NTTCom-MS/eyp-fail2ban",
   "project_page": null,
