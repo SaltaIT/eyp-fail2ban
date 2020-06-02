@@ -18,7 +18,7 @@ class fail2ban::params {
           $package_name='fail2ban'
           $jaild=undef
         }
-        /^7.*$/:
+        /^[78].*$/:
         {
           $package_name=[ 'fail2ban', 'fail2ban-systemd' ]
           $jaild='/etc/fail2ban/jail.d'
@@ -36,10 +36,10 @@ class fail2ban::params {
         {
           case $::operatingsystemrelease
           {
-            /^14.*$/:
+            /^1[468].*$/:
             {
             }
-            /^16.*$/:
+            /^20.*$/:
             {
             }
             default: { fail("Unsupported Ubuntu version! - ${::operatingsystemrelease}")  }
