@@ -1,6 +1,6 @@
 {
   "name": "eyp-fail2ban",
-  "version": "0.1.1",
+  "version": "1.0.1",
   "author": "Jordi Prats",
   "summary": "fail2ban management",
   "license": "Apache-2.0",
